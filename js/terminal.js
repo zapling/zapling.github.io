@@ -10,7 +10,6 @@ async function outputTerminal(element) {
         t.type(
           `<div>
             <pre>${_getAsciiArt()}</pre>
-            <p>Welcome back!</p>
           </div>`)
          .then(async (t) => {
            t.instant(_getCommandLine('remote'));
@@ -32,32 +31,32 @@ function _getText() {
   <div class="palm-txt">
     <p>Hi there! I am Andreas Palm.</p>
     <p>
-      I'm currently a <span class="highlight">[System Developer]</span> at 
-      ${_getLink('[Abicart]', 'https://abicart.com')}.
+      I'm currently a ${_getHighlight('[System Developer]')} at ${_getLink('[Abicart]', 'https://abicart.com')}.
     </p>
     <p>
-      I love working with code and you could say that I'm a terminal junkie. I am mainly a back-end
-       developer but know my way around a front-end.
+      I love working with code and you could say that I'm a terminal junkie. I'm a ${_getHighlight('back-end')}
+       developer and have experience with ${_getHighlight('PHP')} and ${_getHighlight('Python')}. Currently striving to learn more ${_getHighlight('Go')}.
     </p>
     <p>
-      I'm very familiar with linux and have no problem navigating between servers and services.
-      I also use a custom keyboard ${_getLink('[Atreus62]', 'https://github.com/zapling/qmk-atreus62')}
-      and have problems even using a regular keyboard nowdays :(
+      I navigate between servers reguarly and are no newcomer to the Terminal, I even prefer it most of the times.
     </p>
     <p>
-      I'm always looking for new opportunities and challenges to make be an even better coder.
-      Don't hesitate to contact me at <span class="highlight">me[a]andreaspalm.se</span>
+      I'm always looking for new opportunities and challenges to make me an even better coder.
+      Don't hesitate to contact me at ${_getHighlight('me[a]andreaspalm.se')}
     </p>
     <p>Here is some hyperlinks ↩️</p>
     <ul>
       <li>${_getLink('[LinkedIn]', 'https://linkedin.com/in/palm-andreas')}</li>
       <li>${_getLink('[Github]', 'https://github.com/zapling')}</li>
-      <li>${_getLink('[Projects]', '')}</li>
     </ul>
     <p>Cheers!</p>
   </div>
   `;
 };
+
+function _getHighlight(text) {
+  return `<span class="highlight">${text}</span>`;
+}
 
 function _getLink(text, href) {
   return `<a href="${href}" target="_blank">${text}</a>`
