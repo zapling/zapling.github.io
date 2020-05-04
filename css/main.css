@@ -1,0 +1,99 @@
+/* Github corner css */
+.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
+
+
+:root {
+  /* One Dark color theme */
+  --color-normal: #abb2bf;
+  --color-keyword: #c678dd;
+  --color-builtin: #56b6c2;
+  --color-definition: #61afef;
+  --color-comment: #5c6370;
+  --color-string: #98c379;
+  --color-number: #d19a66;
+  --color-instance: #e5c07b;
+  --color-variable: #e06C75;
+  --color-background: #282c34;
+}
+
+* {
+  font-family: courier, monospace;
+}
+
+html {
+  background-color: var(--color-background);
+}
+
+#terminal {
+  color: var(--color-normal);
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 992px) {
+  #terminal {
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+  }
+}
+
+/* Boot Sequence */
+
+div > span.ok {
+  color: var(--color-string);
+}
+
+div > span.error {
+  color: var(--color-variable);
+}
+
+/* Terminal */
+
+span.host {
+  color: var(--color-string);
+}
+
+span.tilda {
+  color: var(--color-variable);
+}
+
+span.dollar {
+  color: var(--color-builtin);
+}
+
+/* Ascii art */
+
+pre {
+  overflow: hidden;
+}
+
+pre > span.leaves {
+  color: var(--color-string);
+}
+
+pre > span > span.sun {
+  color: var(--color-instance);
+}
+
+pre span.bark {
+  color: #955425;
+}
+
+pre span.sand {
+  color: var(--color-number);
+}
+
+pre span.water {
+  color: var(--color-builtin);
+}
+
+/* palm.txt */
+
+div.palm-txt span.highlight {
+  color: var(--color-number);
+}
+
+div.palm-txt a {
+  color: var(--color-definition);
+}
