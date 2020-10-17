@@ -2,7 +2,19 @@ import React from 'react';
 import Typist from 'react-typist';
 
 export default class BootSequence extends React.Component {
+
+    getBootTasks() {
+        return [
+            {text: 'Love for tacos',         status: 0},
+            {text: 'Red bull junkie',        status: 0},
+            {text: 'Love for dogs and cats', status: 0},
+            {text: 'Speghetti code',         status: 1}
+        ];
+    }
+
     render() {
+        const tasks = this.getBootTasks();
+
         return (
             <Typist
                 cursor={this.props.cursor}
@@ -11,11 +23,11 @@ export default class BootSequence extends React.Component {
             >
                 Boot sequence
                 <ul>
-                    <li>Love for tacos</li>
-                    <li>Red bull junkie</li>
-                    <li>Snacksman</li>
-                    <li>Love for dogs and cats</li>
-                    <li>Speghetti code</li>
+                    {tasks.map(task => (
+                        <li>
+                            [ <span>{task.status == 0 ? 'OK' : 'ERROR'}</span> ] {task.text}
+                        </li>
+                    ))}
                 </ul>
                 <Typist.Delay ms={500} />
             </Typist>
