@@ -24,8 +24,8 @@ export default class BootSequence extends React.Component {
                 Boot sequence
                 <ul>
                     {tasks.map(task => (
-                        <li>
-                            [ <span>{task.status == 0 ? 'OK' : 'ERROR'}</span> ] {task.text}
+                        <li key={task.text}>
+                            [ <span>{task.status === 0 ? 'OK' : 'ERROR'}</span> ] {task.text}
                         </li>
                     ))}
                 </ul>

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import BootSequence from './bootSequence.jsx'
+import BootSequence from './bootSequence.jsx';
+import SSHSequence from './SSHSequence.jsx';
 
 class Terminal extends React.Component {
 
@@ -15,18 +16,20 @@ class Terminal extends React.Component {
     }
 
     render() {
-        if (this.state.sequence === 0) {
-            return (
-                <BootSequence
-                    cursor={this.state.cursor}
-                    onDone={() => this.setState({sequence: 1})}
-                />
-            );
+        switch (this.state.sequence) {
+            case 0: // Boot Sequence
+                return (
+                    <BootSequence
+                        cursor={this.state.cursor}
+                        onDone={() => this.setState({sequence: 1})}
+                    />
+                );
+            case 1: // SSH Sequence
+            default:
+                return (
+                    <SSHSequence cursor={this.state.cursor} />
+                );
         }
-
-        return (
-            <div>We should type the ssh part now</div>
-        );
     }
 }
 
