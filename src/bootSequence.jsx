@@ -18,21 +18,23 @@ export default class BootSequence extends React.Component {
         const tasks = this.getBootTasks();
 
         return (
-            <Typist
-                cursor={this.props.cursor}
-                delayGenerator={() => 1 }
-                onTypingDone={this.props.onDone}
-            >
-                Boot sequence
-                <ul>
-                    {tasks.map(task => (
-                        <li key={task.text}>
-                            [ <span data={task.status}>{task.status === 0 ? 'OK' : 'ERROR'}</span> ] {task.text}
-                        </li>
-                    ))}
-                </ul>
-                <Typist.Delay ms={500} />
-            </Typist>
+            <div className="boot">
+                <Typist
+                    cursor={this.props.cursor}
+                    delayGenerator={() => 1 }
+                    onTypingDone={this.props.onDone}
+                >
+                    Boot sequence
+                    <ul>
+                        {tasks.map(task => (
+                            <li key={task.text}>
+                                [ <span data={task.status}>{task.status === 0 ? 'OK' : 'ERROR'}</span> ] {task.text}
+                            </li>
+                        ))}
+                    </ul>
+                    <Typist.Delay ms={500} />
+                </Typist>
+            </div>
         );
     }
 }
