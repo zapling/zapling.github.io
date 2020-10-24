@@ -69,18 +69,20 @@ export default class SSHSequence extends React.Component {
     getAsciiArt() {
         return (
             <pre>
-            <span class="leaves">{'            '}___{'   '}____<br/>
-{'          '}/' --;^/ ,-_\       <span class="sun">\ | /</span><br/>
-{'         '}/ /--o\ o-\   \     <span class="sun">--(_)--</span><br/>
-{'        '}/-/-/|o<span class="bark">|-|</span>\-\|  \{'     '}<span class="sun">/ | \</span><br/>
-{'         '}'`  ` <span class="bark">|-|</span> `` '<br/>
-{'               '}<span class="bark">|-|</span><br/>
-{'               '}<span class="bark">|-|</span><span class="human">O</span><br/>
-{'               '}<span class="bark">|-</span><span class="human">(\\,__</span><br/>
-{'            '}<span class="sand">...</span><span class="bark">|-|</span><span class="human">\\--,\\_</span><span class="sand">....<br/>
-{'        '},;;;;;;;;;;;;;;;;;;;;;;;;,.</span><br/>
-{'  '}<span class="water">~~</span><span class="sand">,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,</span><span class="water">~~~<br/>
-{'  '}~</span><span class="sand">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,</span><span class="water">~~~~~</span></span><br/>
+                <span class="leaves">
+                    {'            '}___{'   '}____<br/>
+                    {'          '}/' --;^/ ,-_\       <span class="sun">\ | /</span><br/>
+                    {'         '}/ /--o\ o-\   \     <span class="sun">--(_)--</span><br/>
+                    {'        '}/-/-/|o<span class="bark">|-|</span>\-\|  \{'     '}<span class="sun">/ | \</span><br/>
+                    {'         '}'`  ` <span class="bark">|-|</span> `` '<br/>
+                    {'               '}<span class="bark">|-|</span><br/>
+                    {'               '}<span class="bark">|-|</span><span class="human">O</span><br/>
+                    {'               '}<span class="bark">|-</span><span class="human">(\\,__</span><br/>
+                    {'            '}<span class="sand">...</span><span class="bark">|-|</span><span class="human">\\--,\\_</span><span class="sand">....<br/>
+                    {'        '},;;;;;;;;;;;;;;;;;;;;;;;;,.</span><br/>
+                    {'  '}<span class="water">~~</span><span class="sand">,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,</span><span class="water">~~~<br/>
+                    {'  '}~</span><span class="sand">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,</span><span class="water">~~~~~</span>
+                </span>
             </pre>
         );
     }
