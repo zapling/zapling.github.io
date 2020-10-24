@@ -29,7 +29,8 @@ export default class SSHSequence extends React.Component {
 
     render() {
         return (
-            <div className="terminal">{this.getTerminalPrefix()}
+            <div className="terminal">
+                {this.getTerminalPrefix()}
                 <Typist
                     style={{display: "inline"}}
                     cursor={this.props.cursor}
@@ -56,7 +57,7 @@ export default class SSHSequence extends React.Component {
                             cursor={this.props.cursor}
                             delayGenerator={() => 30}
                         >
-                            <Typist.Delay ms={300} />
+                            <Typist.Delay ms={700} />
                             cat palm.text
                         </Typist>
                     </div>
@@ -74,9 +75,9 @@ export default class SSHSequence extends React.Component {
 {'        '}/-/-/|o<span class="bark">|-|</span>\-\|  \{'     '}<span class="sun">/ | \</span><br/>
 {'         '}'`  ` <span class="bark">|-|</span> `` '<br/>
 {'               '}<span class="bark">|-|</span><br/>
-{'               '}<span class="bark">|-|</span>O<br/>
-{'               '}<span class="bark">|-</span>(\\,__<br/>
-{'            '}<span class="sand">...</span><span class="bark">|-|</span>\\--,\\_<span class="sand">....<br/>
+{'               '}<span class="bark">|-|</span><span class="human">O</span><br/>
+{'               '}<span class="bark">|-</span><span class="human">(\\,__</span><br/>
+{'            '}<span class="sand">...</span><span class="bark">|-|</span><span class="human">\\--,\\_</span><span class="sand">....<br/>
 {'        '},;;;;;;;;;;;;;;;;;;;;;;;;,.</span><br/>
 {'  '}<span class="water">~~</span><span class="sand">,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,</span><span class="water">~~~<br/>
 {'  '}~</span><span class="sand">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,</span><span class="water">~~~~~</span></span><br/>

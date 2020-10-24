@@ -13,3 +13,29 @@ span.prefix span.tilda {
 span.prefix span.dollar {
     color: var(--color-builtin);
 }
+
+/* Ascii art */
+
+pre span.leaves {
+    color: var(--color-string);
+}
+
+pre span.sun {
+    color: var(--color-instance);
+}
+
+pre span.bark {
+    color: #955425;
+}
+
+pre span.human {
+    color: var(--color-normal);
+}
+
+pre span.sand {
+    color: var(--color-number);
+}
+
+pre span.water {
+    color: var(--color-builtin);
+}
