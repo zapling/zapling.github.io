@@ -1,0 +1,16 @@
+div.boot ul {
+    display: inline;
+    padding-left: 0px;
+}
+
+div.boot ul > li {
+    list-style: none;
+}
+
+div.boot li > span[data="0"] {
+    color: var(--color-string);
+}
+
+div.boot li > span[data="1"] {
+    color: var(--color-variable);
+}

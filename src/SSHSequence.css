@@ -1,0 +1,50 @@
+div.terminal .Typist {
+    display: inline;
+}
+
+div.palmTxt span.highlight {
+    color: var(--color-number);
+}
+
+div.palmTxt a {
+    color: var(--color-definition);
+}
+
+/* Terminal prefix */
+span.prefix span.host {
+    color: var(--color-string);
+}
+
+span.prefix span.tilda {
+    color: var(--color-variable);
+}
+
+span.prefix span.dollar {
+    color: var(--color-builtin);
+}
+
+/* Ascii art */
+
+pre span.leaves {
+    color: var(--color-string);
+}
+
+pre span.sun {
+    color: var(--color-instance);
+}
+
+pre span.bark {
+    color: #955425;
+}
+
+pre span.human {
+    color: var(--color-normal);
+}
+
+pre span.sand {
+    color: var(--color-number);
+}
+
+pre span.water {
+    color: var(--color-builtin);
+}
