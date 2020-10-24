@@ -1,5 +1,6 @@
 import React from 'react';
 import Typist from 'react-typist';
+import './SSHSequence.css';
 
 export default class SSHSequence extends React.Component {
     constructor(props) {
@@ -15,9 +16,20 @@ export default class SSHSequence extends React.Component {
         this.setState({sections: sections});
     }
 
+    getTerminalPrefix(ssh=false) {
+        let server = ssh === true ? 'andreaspalm.se' : 'local';
+        return (
+            <span className="prefix">
+                <span className="host">me@{server}</span>:
+                <span className="tilda">~</span>
+                <span className="dollar">$</span>&nbsp;
+            </span>
+        );
+    }
+
     render() {
         return (
-            <div>me@local:~$
+            <div className="terminal">{this.getTerminalPrefix()}
                 <Typist
                     style={{display: "inline"}}
                     cursor={this.props.cursor}
@@ -34,16 +46,17 @@ export default class SSHSequence extends React.Component {
                         onTypingDone={() => this.typeSection('palm.txt') }
                     >
                         { this.getAsciiArt() }
-                        <Typist.Delay ms={300} />
                     </Typist>
                 ) : null}
 
                 { this.state.sections.includes('palm.txt') ? (
                     <div>
-                        me@andreaspalm.se:~$
+                        {this.getTerminalPrefix(true)}
                         <Typist
                             cursor={this.props.cursor}
+                            delayGenerator={() => 30}
                         >
+                            <Typist.Delay ms={300} />
                             cat palm.text
                         </Typist>
                     </div>
@@ -66,7 +79,7 @@ export default class SSHSequence extends React.Component {
 {'            '}<span class="sand">...</span><span class="bark">|-|</span>\\--,\\_<span class="sand">....<br/>
 {'        '},;;;;;;;;;;;;;;;;;;;;;;;;,.</span><br/>
 {'  '}<span class="water">~~</span><span class="sand">,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,</span><span class="water">~~~<br/>
-{'      '}~</span><span class="sand">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,</span><span class="water">~~~~~</span></span><br/>
+{'  '}~</span><span class="sand">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,</span><span class="water">~~~~~</span></span><br/>
             </pre>
         );
     }

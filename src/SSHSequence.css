@@ -1,0 +1,15 @@
+div.terminal .Typist {
+    display: inline;
+}
+
+span.prefix span.host {
+    color: var(--color-string);
+}
+
+span.prefix span.tilda {
+    color: var(--color-variable);
+}
+
+span.prefix span.dollar {
+    color: var(--color-builtin);
+}
