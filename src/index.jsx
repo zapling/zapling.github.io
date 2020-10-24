@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import BootSequence from './bootSequence.jsx';
 import SSHSequence from './SSHSequence.jsx';
+import './index.css';
 
 class Terminal extends React.Component {
 

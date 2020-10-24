@@ -1,5 +1,6 @@
 import React from 'react';
 import Typist from 'react-typist';
+import './bootSequence.css'
 
 export default class BootSequence extends React.Component {
 
@@ -7,6 +8,7 @@ export default class BootSequence extends React.Component {
         return [
             {text: 'Love for tacos',         status: 0},
             {text: 'Red bull junkie',        status: 0},
+            {text: 'Love for coffe',         status: 1},
             {text: 'Love for dogs and cats', status: 0},
             {text: 'Speghetti code',         status: 1}
         ];
@@ -25,7 +27,7 @@ export default class BootSequence extends React.Component {
                 <ul>
                     {tasks.map(task => (
                         <li key={task.text}>
-                            [ <span>{task.status === 0 ? 'OK' : 'ERROR'}</span> ] {task.text}
+                            [ <span data={task.status}>{task.status === 0 ? 'OK' : 'ERROR'}</span> ] {task.text}
                         </li>
                     ))}
                 </ul>

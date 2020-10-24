@@ -1,0 +1,16 @@
+ul {
+    display: inline;
+    padding-left: 0px;
+}
+
+ul > li {
+    list-style: none;
+}
+
+li > span[data="0"] {
+    color: var(--color-string);
+}
+
+li > span[data="1"] {
+    color: var(--color-variable);
+}
