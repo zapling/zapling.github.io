@@ -15,6 +15,8 @@
 
 ## andreaspalm.se
 
+Website is served under `docs/`.
+
 ### `npm start`
 
 Start development server
