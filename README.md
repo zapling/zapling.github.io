@@ -19,6 +19,6 @@
 
 Start development server
 
-### `make build`
+### `make build-prod`
 
 Builds the app for production to the `docs` folder. Commit changes in order to update website on github.
