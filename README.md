@@ -17,10 +17,13 @@
 
 Website is served under `docs/`.
 
-### `npm start`
+## Development
 
-Start development server
+- `make` install dependencies
+- `make dev` start development server
 
-### `make build-prod`
+## Production
 
-Builds the app for production to the `docs` folder. Commit changes in order to update website on github.
+- `make build-prod` build the app for production and puts the app into the `docs/` folder. Commit
+changes and push to github in order to publish the new version.
+

@@ -1,4 +1,10 @@
-.PHONY: build
+.PHONY: setup dev build-prod
+setup:
+	npm install
+
+dev:
+	npm start
+
 build-prod:
 	npm run build
 	mkdir tmp
