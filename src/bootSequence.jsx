@@ -4,6 +4,13 @@ import './bootSequence.css'
 
 export default class BootSequence extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            section: 0
+        };
+    }
+
     getBootTasks() {
         return [
             {text: 'Love for tacos',         status: 0},
@@ -14,15 +21,27 @@ export default class BootSequence extends React.Component {
         ];
     }
 
+    getDots() {
+        const num = Math.floor(Math.random() * (10 - 3 + 1)) + 3;
+
+        let dots="";
+        for (let i = 0; i < num; i++) {
+            dots = dots + ".";
+        }
+
+        return dots;
+    }
+
     render() {
         const tasks = this.getBootTasks();
+        const dots = this.getDots();
 
         return (
             <div className="boot">
                 <Typist
                     cursor={this.props.cursor}
                     delayGenerator={() => 1 }
-                    onTypingDone={this.props.onDone}
+                    onTypingDone={() => this.setState({section: 1})}
                 >
                     Boot sequence
                     <ul>
@@ -32,8 +51,19 @@ export default class BootSequence extends React.Component {
                             </li>
                         ))}
                     </ul>
-                    <Typist.Delay ms={500} />
                 </Typist>
+
+                { this.state.section === 1 ? (
+                    <Typist
+                        cursor={this.props.cursor}
+                        delayGenerator={() => 100}
+                        onTypingDone={this.props.onDone}
+                    >
+                        { dots }
+                        <Typist.Delay ms={500} />
+                    </Typist>
+                ) : null }
+
             </div>
         );
     }
