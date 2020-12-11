@@ -76,15 +76,16 @@ export default class SSHSequence extends React.Component {
                                 I'm currently a <span className="highlight">[System Developer]</span> at <a href="https://abicart.com" target="_blank" rel="noopener noreferrer">[Abicart]</a>.
                             </p>
                             <p>
-                                I love working with code and you could say that I'm a terminal junkie. I'm a <span className="highlight">back-end</span>&nbsp;
-                                developer and have experience with <span className="highlight">PHP</span> and <span className="highlight">Python</span>. Currently striving to learn more <span className="highlight">Go</span>.
+                                I love working with code and learning new things, and I spend most of my days in the terminal.
+                                I'm a <span className="highlight">back-end</span> developer currently exploring <span className="highlight">Go</span>, with previous experience in <span className="highlight">PHP</span> and <span className="highlight">Python</span>.
                             </p>
                             <p>
-                              I navigate between servers reguarly and are no newcomer to the Terminal, I even prefer it most of the times.
+                              Navigating the seas of the web is nothing new to me and I travel reguarly between servers both via SSH and HTTP(S).
                             </p>
                             <p>
-                              I'm always looking for new opportunities and challenges to make me an even better coder.
+                              I'm always interested in opportunities and challenges to make me an even better coder.
                                 Don't hesitate to contact me at <span className="highlight">me[a]andreaspalm.se</span>
+                                , feel free to encrypt your message if you feel sneaky <a className="gpg" href="public_key.txt" target="_blank" rel="noopener noreferrer">[GPG Key]</a>.
                             </p>
                             <p>Here is some hyperlinks ⤦️</p>
                             <ul>
