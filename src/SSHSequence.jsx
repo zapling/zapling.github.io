@@ -73,7 +73,7 @@ export default class SSHSequence extends React.Component {
                         >
                             <p>Hi there! I am Andreas Palm.</p>
                             <p>
-                                I'm currently a <span className="highlight">[System Developer]</span> at <a href="https://abicart.com" target="_blank" rel="noopener noreferrer">[Abicart]</a>.
+                                I'm currently a <span className="highlight">[Software Developer]</span> at <a href="https://zimpler.com" target="_blank" rel="noopener noreferrer">[Zimpler]</a>.
                             </p>
                             <p>
                                 I love working with code and learning new things, and I spend most of my days in the terminal.
