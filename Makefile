@@ -5,14 +5,14 @@ setup:
 dev:
 	npm start
 
-build-prod:
-	npm run build
-	mkdir tmp
-	mv docs/CNAME tmp/.
-	mv docs/_config.yml tmp/.
+build-clean:
+	mv docs/CNAME .
+	mv docs/_config.yml .
 	rm -rf docs/
-	mkdir docs/
+	mkdir docs
+	mv CNAME docs/.
+	mv _config.yml docs/.
+
+build-prod: build-clean
+	npm run build
 	cp -r build/* docs/.
-	mv tmp/CNAME docs/.
-	mv tmp/_config.yml docs/.
-	rm -r tmp
