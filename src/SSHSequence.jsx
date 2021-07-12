@@ -73,21 +73,21 @@ export default class SSHSequence extends React.Component {
                         >
                             <p>Hi there! I am Andreas Palm.</p>
                             <p>
-                                I'm currently a <span className="highlight">[Software Developer]</span> at <a href="https://zimpler.com" target="_blank" rel="noopener noreferrer">[Zimpler]</a>.
+                              I currently work as a <span className="highlight">[Software Developer]</span> at <a href="https://zimpler.com" target="_blank" rel="noopener noreferrer">[Zimpler]</a>.
                             </p>
                             <p>
-                                I love working with code and learning new things, and I spend most of my days in the terminal.
-                                I'm a <span className="highlight">back-end</span> developer currently exploring <span className="highlight">Go</span>, with previous experience in <span className="highlight">PHP</span> and <span className="highlight">Python</span>.
+                              Working with code and learning new things is my passion, and I spend most of my days in a terminal.
+                              I see myself as a <span className="highlight">back-end</span> developer, but I also know my way around a front-end.
+                              I'm currently exploring <span className="highlight">Go</span>, but have previous experience in <span className="highlight">PHP</span> and <span className="highlight">Python</span>.
                             </p>
                             <p>
                               Navigating the seas of the web is nothing new to me and I travel reguarly between servers both via SSH and HTTP(S).
                             </p>
                             <p>
-                              I'm always interested in opportunities and challenges to make me an even better coder.
-                                Don't hesitate to contact me at <span className="highlight">me[a]andreaspalm.se</span>
-                                , feel free to encrypt your message if you feel sneaky <a className="gpg" href="public_key.txt" target="_blank" rel="noopener noreferrer">[GPG Key]</a>.
+                              I'm always interested in hearing about new opportunities and challenges.
+                              Don't hesitate to contact me at <span className="highlight">me[a]andreaspalm.se</span>
                             </p>
-                            <p>Here is some hyperlinks ⤦️</p>
+                            <p>Here is some helpful hyperlinks ⤦️</p>
                             <ul>
                                 <li>
                                     <a href="https://linkedin.com/in/palm-andreas"
