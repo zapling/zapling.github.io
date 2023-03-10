@@ -1,9 +1,4 @@
-.PHONY: setup dev build-prod
-setup:
-	npm install
-
-dev:
-	npm start
+.PHONY: build-clean build-prod
 
 build-clean:
 	mv docs/CNAME .
@@ -14,5 +9,5 @@ build-clean:
 	mv _config.yml docs/.
 
 build-prod: build-clean
-	npm run build
+	yarn run build
 	cp -r build/* docs/.

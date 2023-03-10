@@ -17,11 +17,6 @@
 
 Website is served under `docs/`.
 
-## Development
-
-- `make` install dependencies
-- `make dev` start development server
-
 ## Production
 
 - `make build-prod` build the app for production and puts the app into the `docs/` folder. Commit
