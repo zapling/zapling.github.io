@@ -1,36 +1,40 @@
-import React, { useState } from 'react';
-import Typist from 'react-typist';
+import { useState } from 'react';
+import Typist from 'react-typist-component';
 import { TerminalCommand } from './components/TerminalCommand';
 import './SSHSequence.css';
 
-export const SSHSequence = ({cursor}) => {
+export const SSHSequence = () => {
     const [asciiArt, printAsciiArt] = useState(false);
     const [commandCatPalmText, printCatPalmTxtCommand] = useState(false);
     const [palmTxt, printPalmTxt] = useState(false);
 
     return (
         <div className="terminal">
-            <TerminalCommand remoteConnection={false} cursor={cursor} onTypingDone={() => printAsciiArt(true)}>
+            <TerminalCommand remoteConnection={false} onTypingDone={() => printAsciiArt(true)}>
+                <Typist.Delay ms={500} />
                 ssh andreaspalm.se
+                <Typist.Delay ms={1000} />
             </TerminalCommand>
 
-            { asciiArt && <AsciiArt cursor={cursor} onTypingDone={() => printCatPalmTxtCommand(true)} /> }
+            { asciiArt && <AsciiArt onTypingDone={() => printCatPalmTxtCommand(true)} /> }
 
             { commandCatPalmText && (
-                <TerminalCommand remoteConnection={true} cursor={cursor} onTypingDone={() => printPalmTxt(true)}>
+                <TerminalCommand remoteConnection={true} onTypingDone={() => printPalmTxt(true)}>
+                    <Typist.Delay ms={500} />
                     cat palm.txt
+                    <Typist.Delay ms={500} />
                 </TerminalCommand>
             )}
 
-            { palmTxt && <PalmTxt cursor={cursor} /> }
+            { palmTxt && <PalmTxt /> }
         </div>
     );
 }
 
-const PalmTxt = ({cursor, onTypingDone}) => {
+const PalmTxt = () => {
     return (
         <div className="palmTxt">
-            <Typist cursor={cursor} delayGenerator={() => 10} onTypingDone={onTypingDone}>
+            <Typist cursor={''} typingDelay={10}>
                 <p>Hi there! I am Andreas Palm.</p>
                 <p>
                   I currently work as a <span className="highlight">[Software Developer]</span> at <a href="https://zimpler.com" target="_blank" rel="noopener noreferrer">[Zimpler]</a>.
@@ -67,31 +71,34 @@ const PalmTxt = ({cursor, onTypingDone}) => {
                     </li>
                 </ul>
                 <p>Cheers!</p>
-                <TerminalCommand remoteConnection={false} cursor={cursor} />
+                <TerminalCommand remoteConnection={true} />
                 &nbsp;
             </Typist>
         </div>
     );
 }
 
-const AsciiArt = ({cursor, onTypingDone}) => {
+interface IAsciiArtProps {
+  onTypingDone: () => void;
+}
+
+const AsciiArt = ({onTypingDone} : IAsciiArtProps) => {
     return (
-        <Typist cursor={cursor} delayGenerator={() => 1 } onTypingDone={onTypingDone}>
+        <Typist cursor={''} typingDelay={1} onTypingDone={onTypingDone}>
             <pre>
                 <span className="leaves">
-                    {'            '}___{'   '}____<br/>
-                    {'          '}/' --;^/ ,-_\       <span className="sun">\ | /</span><br/>
-                    {'         '}/ /--o\ o-\   \     <span className="sun">--(_)--</span><br/>
-                    {'        '}/-/-/|o<span className="bark">|-|</span>\-\|  \{'     '}<span className="sun">/ | \</span><br/>
-                    {'         '}'`  ` <span className="bark">|-|</span> `` '<br/>
-                    {'               '}<span className="bark">|-|</span><br/>
-                    {'               '}<span className="bark">|-|</span><span className="human">O</span><br/>
-                    {'               '}<span className="bark">|-</span><span className="human">(\\,__</span><br/>
+                    {`            ___   ____`}<br/>
+                    {`          /' --;^/ ,-_\\     `}<span className="sun">{`\\ | /`}</span><br/>
+                    {`         / /--o\\ o-\\ \\ \\   `}<span className="sun">{`--(_)--`}</span><br/>
+                    {`        /-/-/|o`}<span className="bark">{`|-|`}</span>{`\\-\\-\\-\\   `}<span className="sun">{`/ | \\`}</span><br/>
+                    {`         '\`  \` `}<span className="bark">{`|-|`}</span>{` \`\` '`}<br/>
+                    {`               `}<span className="bark">{`|-|`}</span><br/>
+                    {`               `}<span className="bark">{`|-|`}</span><span className="human">O</span><br/>
+                    {`               `}<span className="bark">{`|-`}</span><span className="human">(\\,__</span><br/>
                     {'            '}<span className="sand">...</span><span className="bark">|-|</span><span className="human">\\--,\\_</span><span className="sand">....<br/>
                     {'        '},;;;;;;;;;;;;;;;;;;;;;;;;,.</span><br/>
                     {'  '}<span className="water">~~</span><span className="sand">,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,</span><span className="water">~~~<br/>
-                    {'  '}~</span><span className="sand">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,</span><span className="water">~~~~~</span>
-                </span>
+                    {'  '}~</span><span className="sand">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,</span><span className="water">~~~~~</span>                </span>
             </pre>
         </Typist>
     );

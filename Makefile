@@ -9,5 +9,5 @@ build-clean:
 	mv _config.yml docs/.
 
 build-prod: build-clean
-	yarn run build
+	bun run build
 	cp -r build/* docs/.
