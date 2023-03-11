@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
-import Typist from 'react-typist';
+import { useState } from 'react';
+import Typist from 'react-typist-component';
 import './bootSequence.css'
 
-export const BootSequence = ({ cursor, onDone }) => {
+interface IProps {
+  onDone: () => void;
+}
+
+export const BootSequence = ({onDone}: IProps) => {
     const [initDone, setInitDone] = useState(false);
 
     const bootTasks = [
@@ -15,13 +19,13 @@ export const BootSequence = ({ cursor, onDone }) => {
 
     return (
         <div className="boot">
-            <Typist cursor={cursor} delayGenerator={() => 1} onTypingDone={() => setInitDone(true)}>
+            <Typist key={'tasks'} typingDelay={15} cursor={''} onTypingDone={() => setInitDone(true)}>
                 Boot sequence
-                <ul>
+                <ul key={'tasks'}>
                     { bootTasks.map((task, index) => (
                         <li key={index}>
                             [
-                            <span data={task.status === 'ok' ? 0 : 1}>
+                            <span key={index} data-status={task.status}>
                                 { task.status.toUpperCase() }
                             </span>
                             ]
@@ -33,9 +37,9 @@ export const BootSequence = ({ cursor, onDone }) => {
             </Typist>
 
             { initDone && (
-                <Typist cursor={cursor} onTypingDone={() => onDone()}>
+                <Typist key={'loading'} cursor={''} onTypingDone={() => onDone()}>
                     ..........
-                    <Typist.Delay ms={500} />
+                    <Typist.Delay key={'loading'} ms={500} />
                 </Typist>
             ) }
         </div>

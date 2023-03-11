@@ -1,28 +1,18 @@
 {
-  "name": "andreaspalm.se",
-  "version": "0.1.0",
-  "private": true,
+  "name": "zapling.github.io",
+  "version": "0.1.79",
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "^4.0.3",
-    "react-typist": "^2.0.5"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-typist-component": "^1.0.5"
   },
-  "resolutions": {
-    "immer": "9.0.6",
-    "glob-parent": "5.1.2",
-    "set-value": "4.0.1",
-    "ansi-regex": "5.0.1",
-    "nth-check": "2.0.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "bun-types": "^0.5.7",
+    "react-refresh": "0.10.0",
+    "react-scripts": "^5.0.1",
+    "typescript": "latest"
   },
   "browserslist": {
     "production": [
@@ -35,5 +25,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "scripts": {
+      "build": "react-scripts build"
   }
 }

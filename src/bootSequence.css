@@ -7,10 +7,10 @@ div.boot ul > li {
     list-style: none;
 }
 
-div.boot li > span[data="0"] {
+div.boot li > span[data-status="ok"] {
     color: var(--color-string);
 }
 
-div.boot li > span[data="1"] {
+div.boot li > span[data-status="error"] {
     color: var(--color-variable);
 }
