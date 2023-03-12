@@ -108,60 +108,24 @@ interface IAsciiArtProps {
 }
 
 const AsciiArt = ({ onTypingDone }: IAsciiArtProps) => {
+	// rome-ignore format: Ascii art should not be formatted
 	return (
-		<Typist cursor={""} typingDelay={1} onTypingDone={onTypingDone}>
-			<pre>
-				<span className="leaves">
-					{`            ___   ____`}
-					<br />
-					{`          /' --;^/ ,-_\\     `}
-					<span className="sun">{`\\ | /`}</span>
-					<br />
-					{`         / /--o\\ o-\\ \\ \\   `}
-					<span className="sun">{`--(_)--`}</span>
-					<br />
-					{`        /-/-/|o`}
-					<span className="bark">{`|-|`}</span>
-					{`\\-\\-\\-\\   `}
-					<span className="sun">{`/ | \\`}</span>
-					<br />
-					{`         '\`  \` `}
-					<span className="bark">{`|-|`}</span>
-					{` \`\` '`}
-					<br />
-					{`               `}
-					<span className="bark">{`|-|`}</span>
-					<br />
-					{`               `}
-					<span className="bark">{`|-|`}</span>
-					<span className="human">O</span>
-					<br />
-					{`               `}
-					<span className="bark">{`|-`}</span>
-					<span className="human">(\\,__</span>
-					<br />
-					{"            "}
-					<span className="sand">...</span>
-					<span className="bark">|-|</span>
-					<span className="human">\\--,\\_</span>
-					<span className="sand">
-						....
-						<br />
-						{"        "},;;;;;;;;;;;;;;;;;;;;;;;;,.
-					</span>
-					<br />
-					{"  "}
-					<span className="water">~~</span>
-					<span className="sand">,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,</span>
-					<span className="water">
-						~~~
-						<br />
-						{"  "}~
-					</span>
-					<span className="sand">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,</span>
-					<span className="water">~~~~~</span>{" "}
-				</span>
-			</pre>
-		</Typist>
-	);
+    <Typist cursor={''} typingDelay={1} onTypingDone={onTypingDone}>
+        <pre>
+            <span className="leaves">
+                {`            ___   ____`}<br/>
+                {`          /' --;^/ ,-_\\     `}<span className="sun">{`\\ | /`}</span><br/>
+                {`         / /--o\\ o-\\ \\ \\   `}<span className="sun">{`--(_)--`}</span><br/>
+                {`        /-/-/|o`}<span className="bark">{`|-|`}</span>{`\\-\\-\\-\\   `}<span className="sun">{`/ | \\`}</span><br/>
+                {`         '\`  \` `}<span className="bark">{`|-|`}</span>{` \`\` '`}<br/>
+                {`               `}<span className="bark">{`|-|`}</span><br/>
+                {`               `}<span className="bark">{`|-|`}</span><span className="human">O</span><br/>
+                {`               `}<span className="bark">{`|-`}</span><span className="human">(\\,__</span><br/>
+                {'            '}<span className="sand">...</span><span className="bark">|-|</span><span className="human">\\--,\\_</span><span className="sand">....<br/>
+                {'        '},;;;;;;;;;;;;;;;;;;;;;;;;,.</span><br/>
+                {'  '}<span className="water">~~</span><span className="sand">,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,</span><span className="water">~~~<br/>
+                {'  '}~</span><span className="sand">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,</span><span className="water">~~~~~</span>                </span>
+        </pre>
+    </Typist>
+  );
 };
