@@ -12,6 +12,7 @@
     "bun-types": "^0.5.7",
     "react-refresh": "0.10.0",
     "react-scripts": "^5.0.1",
+    "rome": "^11.0.0",
     "typescript": "latest"
   },
   "browserslist": {
@@ -27,6 +28,7 @@
     ]
   },
   "scripts": {
-      "build": "react-scripts build"
+    "build": "react-scripts build",
+    "check": "rome check src/."
   }
 }
