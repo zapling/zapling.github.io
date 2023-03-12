@@ -1,13 +1,8 @@
-.PHONY: build-clean build-prod
+.PHONY: production-build
 
-build-clean:
-	mv docs/CNAME .
-	mv docs/_config.yml .
-	rm -rf docs/
+production-build:
+	rm -r docs/
 	mkdir docs
-	mv CNAME docs/.
-	mv _config.yml docs/.
-
-build-prod: build-clean
+	cp github_pages/* docs/.
 	bun run build
 	cp -r build/* docs/.
