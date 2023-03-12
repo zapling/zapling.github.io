@@ -1,24 +1,25 @@
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom/client';
-import { BootSequence } from './BootSequence';
-import { SSHSequence } from './SSHSequence';
-import './index.css';
+import React, { useState } from "react";
+import ReactDOM from "react-dom/client";
+import { BootSequence } from "./BootSequence";
+import { SSHSequence } from "./SSHSequence";
+import "./index.css";
 
 const Terminal = () => {
-    const [initDone, setInitDone] = useState(false);
-    return (
-        <div>
-            { !initDone
-                ? <BootSequence onDone={() => setInitDone(true)} />
-                : <SSHSequence />
-            }
-        </div>
-    );
-}
+	const [initDone, setInitDone] = useState(false);
+	return (
+		<div>
+			{!initDone ? (
+				<BootSequence onDone={() => setInitDone(true)} />
+			) : (
+				<SSHSequence />
+			)}
+		</div>
+	);
+};
 
-const root = ReactDOM.createRoot(document.getElementById('root') as Element);
+const root = ReactDOM.createRoot(document.getElementById("root") as Element);
 root.render(
-    <React.StrictMode>
-        <Terminal />
-    </React.StrictMode>
+	<React.StrictMode>
+		<Terminal />
+	</React.StrictMode>,
 );
