@@ -61,8 +61,8 @@ const PalmTxt = () => {
           most of my days in a terminal. I see myself as a{" "}
           <span className="highlight">back-end</span> developer, but I also know
           my way around a front-end. I'm currently exploring{" "}
-          <span className="highlight">Go</span>, but have previous experience in{" "}
-          <span className="highlight">Typescript</span>,
+          <span className="highlight">Go</span> but have previous experience in{" "}
+          <span className="highlight">Typescript</span>,{" "}
           <span className="highlight">PHP</span> and{" "}
           <span className="highlight">Python</span>.
         </p>
